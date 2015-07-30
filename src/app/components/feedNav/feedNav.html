@@ -1,0 +1,22 @@
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right"
+	md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-light md-hue-1">
+        <h1 class="md-toolbar-tools">Feeds</h1>
+    </md-toolbar>
+    <md-content layout-padding>
+        <md-list>
+            <md-list-item class="md-3-line" ng-repeat="item in vm.feeds">
+                <img ng-src="{{item.img}}" class="md-avatar" alt="{{item.name}}" />
+                <div class="md-list-item-text">
+                    <h3 class="inline-block">{{ item.name }}</h3>
+                    <span>{{ item.action }}</span> 
+                    <span>{{item.title}}</span>
+                    <div class="m-t-xs">
+                    <i class="material-icons md-18 p-r-xxs pull-left">av_timer</i>
+                    <span am-time-ago="item.date"></span>
+                    </div>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>

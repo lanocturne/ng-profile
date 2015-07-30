@@ -1,0 +1,23 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-theme-indigo md-hue-2">
+        <h1 class="md-toolbar-tools">Friends</h1>
+    </md-toolbar>
+    <md-content layout-padding>
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+            Close Sidenav Left
+        </md-button>
+        <div hide-md show-gt-md>
+            <md-list>
+                <md-list-item ng-repeat="person in vm.people" ng-click="goToPerson(person.name, $event)">
+                    <img alt="{{ person.name }}" ng-src="{{ person.img }}" class="md-avatar" />
+                    <p>{{ person.name }}</p>
+                    <md-icon ng-click="doSecondaryAction($event)" aria-label="Open Chat" class="md-secondary md-hue-3" ng-class="{'md-primary': person.live}">
+                        <i class="material-icons"
+                    ng-class="{'md-primary': person.live}">message</i>
+                    </md-icon>
+                        
+                </md-list-item>
+            </md-list>
+        </div>
+    </md-content>
+</md-sidenav>

@@ -4,3 +4,7 @@ bower_components/
 .idea/
 .tmp/
 dist/
+.bowerrc
+.editorconfig
+.jshintrc
+.yo-rc.json

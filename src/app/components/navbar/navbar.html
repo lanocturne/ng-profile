@@ -1,0 +1,10 @@
+<md-toolbar layout="row" layout-align="center center">
+    <div class="md-toolbar-tools">
+        <h2><span>ng-FB</span></h2>
+         <md-button class="md-raised md-primary md-hue-1 m-l"
+         ng-click='vm.logout()'
+         ng-hide="!vm.loginStatus || vm.loginStatus.status != 'connected'">Logout</md-button>
+        <span flex></span>
+        <md-button class="acme-navbar-text">Application was created {{ vm.relativeDate }}.</md-button>
+    </div>
+</md-toolbar>
